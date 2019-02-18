@@ -1,51 +1,69 @@
 {{!< default}}
 
-{{#post}}
+<div class="container-fluid">
+    <div class="container">
+        {{#post}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron jumbotron-fluid {{#if
+                            feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+                        <div class="container">
+                            <h1 class="display-4">{{title}}</h1>
+                            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+                                parent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<header class="site {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
-	<div class="container">
-		<section>
-			<h1>{{title}}</h1>
-			<div class="post-meta">
-				<time datetime="{{date format="YYYY-MM-DD"}}" itemProp="datePublished">
-					Published on {{date format="MMMM DD, YYYY"}}
-				</time>
-				{{> "author-list"}}
-				{{> "post-tags"}}
-				<span class="reading-time">{{reading_time}}</span>
-			</div>
-		</section>
-	</div>
-</header>
+            <div class="row">
+                <div class="col-12">
+                    <div class="post-meta">
+                        <time datetime="{{date format="YYYY-MM-DD"}}" itemProp="datePublished">
+                            Published on {{date format="MMMM DD, YYYY"}}
+                        </time>
+                        {{> "author-list"}}
+                        {{> "post-tags"}}
+                        <span class="reading-time">{{reading_time}}</span>
+                    </div>
+                </div>
+            </div>
 
-<main class="site" role="main">
-	<article itemScope itemType="http://schema.org/BlogPosting">
-		<section class="post-content" itemProp="articleBody">
-			{{content}}
-		</section>
+            <div class="row">
+                <div class="col-12">
+                    <article itemScope itemType="http://schema.org/BlogPosting">
+                        <section class="post-content" itemProp="articleBody">
+                            {{content}}
+                        </section>
 
-		<footer>
-			<section class="share">
-				<h4>Share this post</h4>
-				<a class="social-link social-link-tw" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" title="Twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">{{> "icons/twitter"}}</a>
-				<a class="social-link social-link-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">{{> "icons/facebook"}}</a>
-				<a class="social-link social-link-hn" href="https://news.ycombinator.com/submitlink?u={{url absolute="true"}}&t={{title}}" title="Hacker News" onclick="window.open(this.href, 'hn-share', 'width=580,height=530');return false;">{{> "icons/hackernews"}}</a>
-			</section>
-		</footer>
+                        <footer>
+                            <h4>Condividi</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <section class="share">
+                                        <a href="https://twitter.com/share?text={{title}}&url={{url
+                                            absolute="true"}}" title="Twitter" onclick="window.open(this.href, 'twitter-share',
+                                        'width=550,height=235');return false;"><i class="fab fa-twitter-square fa-2x"></i></a>&nbsp;
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url
+                                            absolute="true"}}" title="Facebook" onclick="window.open(this.href,
+                                        'facebook-share','width=580,height=296');return false;"><i
+                                            class="fab fa-facebook-square fa-2x"></i></a>
+                                    </section>
+                                </div>
+                            </div>
 
-		{{!--
-		<div class="post-comments">
-			If you want to embed comments, this is a good place to do it!
-		</div>
-		--}}
-	</article>
-</main>
+                        </footer>
+                    </article>
+                </div>
+            </div>
 
-{{/post}}
+        {{/post}}
+    </div>
+</div>
 
 {{#contentFor "scripts"}}
-<script src="{{asset "fitvids.min.js"}}"></script>
-<script>
-	fitvids();
-</script>
+    <script src="{{asset "fitvids.min.js"}}"></script>
+    <script>
+        fitvids();
+    </script>
 {{/contentFor}}

@@ -594,3 +594,7 @@ ASALocalRun/
 healthchecksdb
 
 # End of https://www.gitignore.io/api/web,node,macos,windows,webstorm+all,visualstudio,visualstudiocode
+!/content/themes/clean-blog/assets/js/fast-quote.js
+!/content/themes/clean-blog/assets/css/main.css
+!/content/themes/clean-blog/assets/js/config.js
+!/content/themes/clean-blog/assets/js/main.js

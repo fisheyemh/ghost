@@ -1,4 +1,7 @@
 routes:
+  /blog/: blog
+  /garanzie/: garanzie
+  /preventivo/: preventivo
 
 collections:
   /:

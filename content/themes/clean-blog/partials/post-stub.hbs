@@ -1,12 +1,16 @@
-<article class="post-stub" itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
-	<time datetime="{{date format="YYYY-MM-DD"}}" itemProp="datePublished">{{date format="DD MMM YYYY"}}</time>
-	<header>
-		<a href="{{url}}" itemProp="name headline url" class="post-title">{{title}}</a>
-	</header>
-
-	<footer>
-		<span class="reading-time">{{reading_time}}</span>
-		{{> "author-list"}}
-		{{> "post-tags"}}
-	</footer>
+<article class="post-stub border-bottom mb-5" itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
+    <div class="media">
+        <img class="mr-3 img-fluid" width="100px" src="{{img_url feature_image size="small"}}" alt="{{title}}">
+        <div class="media-body">
+            <h5 itemProp="name headline url" class="mt-0"><a href="{{url}}">{{title}}</a></h5>
+            <p>{{excerpt characters="140"}}</p>
+            <small class="mt-2">
+                <time datetime="{{date format="YYYY-MM-DD"}}" itemProp="datePublished">{{date
+                        format="DD MMM YYYY"}}</time>
+            </small>
+            <p>Tempo di lettura: <span class="reading-time">{{reading_time}}</span>
+                {{> "author-list"}}
+                {{> "post-tags"}}</p>
+        </div>
+    </div>
 </article>

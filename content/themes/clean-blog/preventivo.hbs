@@ -1,0 +1,46 @@
+{{!< default}}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Fai un preventivo</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12" id="loading">
+                <i class="fas fa-circle-notch fa-spin fa-4x"></i>
+                <p class="lead">Stiamo calcolando il tuo preventivo</p>
+            </div>
+            <div class="col-12" id="iframeContainer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Polyfill per garantire la compatibilita con vecchi browser di iframeResizer --}}
+{{#contentFor "scripts"}}
+    <script>
+        console.log('ecchime');
+   </script>
+
+    <script type="text/javascript">// <![CDATA[
+    if (!Array.prototype.forEach) {
+        Array.prototype.forEach = function (e) {
+            "use strict";
+            if (this === void 0 || this === null || typeof e !== "function") throw new TypeError;
+            var t = Object(this), n = t.length >>> 0, r = arguments.length >= 2 ? arguments[1] : void 0;
+            for (var i = 0; i < n; i++) if (i in t) e.call(r, t[i], i, t)
+        }
+    }
+    // ]]>
+    </script>
+{{/contentFor}}
+
+
+
+

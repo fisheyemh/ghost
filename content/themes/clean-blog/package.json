@@ -1,11 +1,11 @@
 {
-  "name": "clean-blog",
+  "name": "b2c-innovation-motoplatinum",
   "private": true,
   "version": "1.0.0",
   "author": {
-    "name": "Chad Lee",
-    "email": "ghost@chadly.net",
-    "url": "https://www.chadly.net/"
+    "name": "Fernando Begio Lay",
+    "email": "fernando.begiolay@24hassistance.com",
+    "url": "www.24hassistance.com"
   },
   "keywords": [
     "ghost",
@@ -15,8 +15,8 @@
   "gpm": {
     "type": "theme",
     "categories": [
-        "Minimal",
-        "Personal Blogs"
+      "Minimal",
+      "Personal Blogs"
     ]
   },
   "screenshots": {
@@ -38,7 +38,6 @@
     "fitvids": "^2.0.0"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.7",
     "copyfiles": "^2.0.0",
     "csso-cli": "^1.1.0",
     "less": "^3.8.1",
